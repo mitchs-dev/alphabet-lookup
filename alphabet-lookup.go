@@ -78,6 +78,7 @@ func Convert(inputString string) string {
 }
 
 func ReverseConvert(inputString string) string {
+	inputString = strings.Replace(inputString, "-r", "", -1)
 	if strings.ContainsAny(inputString, "abcdefghijklmnopqrstuvwxyz") {
 		fmt.Println("Error: Input string should only contain numbers when using the reverse conversion")
 		os.Exit(1)
